@@ -11,7 +11,7 @@
 	  			{% for postagem in postagens %}
 				 <div class="card bg-white rounded mt-3" >
 					  <div class="card-body">
-					    <h5 class="card-title">{{ postagem.titulo }}</h5>
+					    <h5 class="card-title"><a href="{% url 'editar_postagem' pk=postagem.pk %}">{{ postagem.titulo }}</a></h5>
 					    <i>{{postagem.data_criacao}} - Autor: {{postagem.autor.username}}</i>
 
 					    <p class="card-text mt-2">{{ postagem.texto }}</p>
